@@ -9,12 +9,12 @@ const ListProduct = () => {
   const [allproducts,setAllproducts] = useState([]);
 
   const fetchInfo = async ()=>{
-    await fetch("http://localhost:4000/allproducts")
+    await fetch("https://ecommerce-bala-indh-rekh-backend2.onrender.com/allproducts")
     .then((res)=>res.json())
     .then((data)=>{setAllproducts(data)});
   }
   const removeProduct = async(id)=>{
-    await fetch("http://localhost:4000/removeproduct",{
+    await fetch("https://ecommerce-bala-indh-rekh-backend2.onrender.com/removeproduct",{
       method:'Post',
       headers:{
         Accept:'application/json',
