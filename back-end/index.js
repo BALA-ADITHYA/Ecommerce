@@ -18,7 +18,7 @@ mongoose.connect('mongodb+srv://balavengat07:naveenbala@cluster0.6op8c.mongodb.n
  })
 // Image Storage 
  const Storage = multer.diskStorage({
-    destination:'./upload/images',
+    destination:'./upload',
     filename:(req,file,cb)=>{
     return cb(null,`${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)
     }
@@ -27,7 +27,7 @@ mongoose.connect('mongodb+srv://balavengat07:naveenbala@cluster0.6op8c.mongodb.n
  const upload = multer({storage:Storage})
 
  // Creating Upload Endpoint
- app.use('/images',express.static('upload/images'))
+ app.use('/images',express.static('upload'))
  app.post("/upload", upload.single('product'),(req,res)=>{
     res.json(
         {success:1,
