@@ -33,7 +33,7 @@ const AddProduct = () => {
 
     formdata.append('product',image)
 
-    await fetch('http://localhost:4000/upload',{
+    await fetch('https://ecommerce-bala-indh-rekh-backend2.onrender.com/upload',{
       method:'Post',
       headers:{
         Accept:'application/json',
@@ -43,7 +43,7 @@ const AddProduct = () => {
 
     if(responseData.success){
       product.image = responseData.image_url
-      await fetch('http://localhost:4000/addproduct',{
+      await fetch('https://ecommerce-bala-indh-rekh-backend2.onrender.com/addproduct',{
         method:'Post',
         headers:{
           Accept:'application/json',
