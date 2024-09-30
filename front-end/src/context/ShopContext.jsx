@@ -22,10 +22,10 @@ const ShopContextProvider = (props) =>{
      
 
       useEffect(()=>{
-        fetch('http://localhost:4000/allproducts').then((res)=>res.json()).then((data)=>setAll_product(data));
+        fetch('https://ecommerce-bala-indh-rekh-backend2.onrender.com/allproducts').then((res)=>res.json()).then((data)=>setAll_product(data));
 
         if (localStorage.getItem("auth-token")){
-          fetch('http://localhost:4000/getcart',{
+          fetch('https://ecommerce-bala-indh-rekh-backend2.onrender.com/getcart',{
             method:'Post',
             headers:{
               Accept:'application/json',
@@ -42,7 +42,7 @@ const ShopContextProvider = (props) =>{
       const addToCart = (itemId)=>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
         if(localStorage.getItem('auth-token')){
-          fetch('http://localhost:4000/addtocart',{
+          fetch('https://ecommerce-bala-indh-rekh-backend2.onrender.com/addtocart',{
             method:'Post',
             headers:{
               Accept:'application/json',
@@ -58,7 +58,7 @@ const ShopContextProvider = (props) =>{
       const removeFromCart = (itemId)=>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
         if(localStorage.getItem('auth-token')){
-          fetch('http://localhost:4000/removefromcart',{
+          fetch('https://ecommerce-bala-indh-rekh-backend2.onrender.com/removefromcart',{
             method:'Post',
             headers:{
               Accept:'application/json',
