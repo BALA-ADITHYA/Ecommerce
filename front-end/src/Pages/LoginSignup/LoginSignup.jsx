@@ -18,7 +18,7 @@ const LoginSignup = () => {
 
   const login = async ()=>{
     let responseDate;
-    await fetch('http://localhost:4000/login',{
+    await fetch('https://ecommerce-bala-indh-rekh-backend2.onrender.com/login',{
       method:'Post',
       headers:{
       Accept:"application/json",
@@ -39,7 +39,7 @@ const LoginSignup = () => {
   const signUp = async()=>{
 
     let responseDate;
-    await fetch('http://localhost:4000/signup',{
+    await fetch('https://ecommerce-bala-indh-rekh-backend2.onrender.com/signup',{
       method:'Post',
       headers:{
       Accept:"application/json",
