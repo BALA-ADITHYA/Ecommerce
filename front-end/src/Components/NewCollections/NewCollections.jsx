@@ -8,7 +8,7 @@ const NewCollections = () => {
   const [new_collections,setNew_collections] = useState([]);
 
   useEffect(()=>{
-    fetch('http://localhost:4000/newcollections').then((res)=>res.json())
+    fetch('https://ecommerce-bala-indh-rekh-backend2.onrender.com/newcollections').then((res)=>res.json())
     .then((data)=>{setNew_collections(data)});
   },[])
 
