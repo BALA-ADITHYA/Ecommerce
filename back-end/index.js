@@ -31,7 +31,7 @@ mongoose.connect('mongodb+srv://balavengat07:naveenbala@cluster0.6op8c.mongodb.n
  app.post("/upload", upload.single('product'),(req,res)=>{
     res.json(
         {success:1,
-        image_url :`https://ecommerce-bala-indh-rekh-backend2.onrender.com/images/${req.file.filename}`
+        image_url :`https://github.com/BALA-ADITHYA/Ecommerce/blob/master/back-end/upload/images/${req.file.filename}`
         }
     )
  })
